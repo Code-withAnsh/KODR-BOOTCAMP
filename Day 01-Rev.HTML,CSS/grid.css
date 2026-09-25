@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Gilroy;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: peachpuff;
+}
+
+#main {
+    border: 4px solid black;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: white;
+  height: 50%;
+  width: 50%;
+ align-self: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 5px;
+  transform: translateY(150px);
+  padding: 10px;
+
+  margin: 0 auto ;
+}
+.box img {
+ height: 100%;
+ width: 100%;
+  object-fit: cover;
+  display: block;
+}
+.box {
+    border-radius: 20px;
+    overflow: hidden;
+  border: 1px solid black;
+  background-color: red;
+}
+#one {
+  grid-row: span 2;
+  background-color: beige;
+  /*kitne row ha height akele lega ye i.e 2 */
+}
+#two {
+  background-color: blue;
+}
+#three {
+  background-color: violet;
+}
+#four {
+  grid-row: span 2;
+  background-color: aqua;
+}
+#five {
+  grid-row: span 2;
+  grid-column: span 2;
+  background-color: antiquewhite;
+}
+#six {
+  grid-row: span 2;
+  background-color: rgb(101, 131, 121);
+}
+#seven {
+  background-color: bisque;
+}
+#eight {
+  background-color: burlywood;
+}
+#nine {
+    height: 100%;
+    width: 100%;
+  background-color: yellowgreen;
+  grid-column: span 2;
+}
