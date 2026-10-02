@@ -5,7 +5,12 @@ let imgs = [
     "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Dario_Amodei_at_TechCrunch_Disrupt_2023_01_%28cropped%29.jpg/330px-Dario_Amodei_at_TechCrunch_Disrupt_2023_01_%28cropped%29.jpg",
     "https://upload.wikimedia.org/wikipedia/commons/4/4e/Nathuram_godse.jpg",
     "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Yogiji_in_2023.jpg/330px-Yogiji_in_2023.jpg",
-    "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/260202-D-PM193-2205_SECWAR_Arsenal_of_Freedom_Tour_-_Florida_%283x4_cropped_on_Bezos_and_rotated%29.jpg/330px-260202-D-PM193-2205_SECWAR_Arsenal_of_Freedom_Tour_-_Florida_%283x4_cropped_on_Bezos_and_rotated%29.jpg"
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/260202-D-PM193-2205_SECWAR_Arsenal_of_Freedom_Tour_-_Florida_%283x4_cropped_on_Bezos_and_rotated%29.jpg/330px-260202-D-PM193-2205_SECWAR_Arsenal_of_Freedom_Tour_-_Florida_%283x4_cropped_on_Bezos_and_rotated%29.jpg",
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Dharmendra_Pradhan%2C_Minister_of_Education.jpg/330px-Dharmendra_Pradhan%2C_Minister_of_Education.jpg",
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Narendra_Modi_Portrait_2026.jpg/330px-Narendra_Modi_Portrait_2026.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/6/69/Mukesh_Ambani.jpg",
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Nitin_Jairam_Gadkari.jpg/330px-Nitin_Jairam_Gadkari.jpg",
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Indian_actor_Amitabh_Bachchan.jpg/330px-Indian_actor_Amitabh_Bachchan.jpg"
 ];
 let main = document.querySelector('main')
 let btn = document.querySelector('#btn')
@@ -15,26 +20,29 @@ let score = document.querySelector("#score")
 let reset = document.querySelector("#reset")
 let count = 0
 let scoreCount = 0;
+let gamePlay=()=>{
+     let interval = setInterval(() => {
+       count++;
+       time.textContent = count;
+       let randomImgs = Math.floor(Math.random() * imgs.length);
+       box.style.backgroundImage = `url(${imgs[randomImgs]})`;
+
+       let rt = Math.floor(Math.random() * 85);
+       let rl = Math.floor(Math.random() * 85);
+       console.log(rt);
+
+       box.style.top = `${rt}%`;
+       box.style.left = `${rl}%`;
+       btn.disabled = true;
+     }, 1000);
+     setTimeout(() => {
+       clearInterval(interval);
+     }, 10000);
+
+}
 btn.addEventListener('click',()=>{
   
-   let interval = setInterval(() => {
-       count++
-       time.textContent = count
-       let randomImgs = Math.floor(Math.random()*imgs.length)
-    box.style.backgroundImage = `url(${imgs[randomImgs]})`
-
-    let rt = Math.floor(Math.random()*85)
-    let rl = Math.floor(Math.random()*85)
-console.log(rt);
-
-    box.style.top = `${rt}%`
-    box.style.left = `${rl}%`
-    btn.disabled = true
-
-    }, 1000);
-    setTimeout(() => {
-      clearInterval(interval);
-    }, 10000);
+gamePlay()
     
     // if (count == 10) {
     //   alert("Game Over!");
@@ -63,4 +71,5 @@ console.log(rt);
     time.textContent = count
     score.textContent = scoreCount
     btn.disabled = false
+    gamePlay()
   })
