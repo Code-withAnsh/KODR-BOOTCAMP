@@ -14,13 +14,16 @@ es6;
 let fn = () => {};
 //implicit return
 
-let summm = (a, b) => {
-  //ye code run hote hi js is summm fn ko undefined kar dega phir wo line no 26 jaha summm call hua hai waha
-  // jayega  aur wo fn ko ivoked karega aur usme 45,90 respective value daal degi aur jaise hi return hua wo valye
-  // bhej dega waha jaha se wo aya h aaya kaha se line no 26 se
-  return a + b;
-};
-summm(45, 90);
+ let summm = (a, b) => {
+   // ye code run hone se pehle memory phase mein 'summm' TDZ mein hota hai
+   // (undefined nahi) — jab tak is line (assignment) execute nahi ho jati
+   // "let summm = ..." execute hote hi TDZ khatam, summm ko function value mil jati hai
+   // phir jab line 26 pe summm(45, 90) call hota hai, wahi function invoke hota hai
+   // a=45, b=90 milte hain, return hoke value wapas line 26 pe chali jaati hai
+   return a + b;
+ };
+ 
+ summm(45, 90);
 
 let add = (a, b) => {
   console.log(a + b);
@@ -48,4 +51,12 @@ let sum = () => {
 };
 ///studey rest 
 
+
+let a = 5;
+let b= 6;
+console.log(a);
+console.log(b);
+
+let aa;
+console.log(aa) 
 
