@@ -1,5 +1,5 @@
 {
-  "name": "kodr",
+  "name": "day-11---react-03",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,9 +11,9 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
-    "nanoid": "^6.0.2",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
+    "react-hook-form": "^7.89.0",
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {

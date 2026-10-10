@@ -1,49 +1,53 @@
 import { useState } from "react";
-
+import Navbar from "./Components/Navbar";
+import UserCard from "./Components/UserCard";
+import Form from "./Components/Form";
 const App = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    password: "",
-  });
-  console.log(formData);
+  const [userData, setUserData] = useState(()=>{
+   return JSON.parse(localStorage.getItem("usersArr")) || []
+  })
+  const [toggle, settoggle] = useState(false)
+  const [isEditedUser, setisEditedUser] = useState(null)
   
-  let handlChange = (e) => {
-    let { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-    console.log("hello");
-  };
+let handleDelete = (id) =>{
+  let arr = userData.filter((val)=>val.id!==id)
+  setUserData(arr)
+    localStorage.setItem("usersArr", JSON.stringify(arr));
+
+}
+
+let handleUpdate = (user)=>{
+  setisEditedUser(user)
+  settoggle(true)
+  console.log(user);
+  
+}
   return (
-    <div className="h-screen  bg-gray-800 p-2 text-white text-2xl flex justify-center items-center flex-col gap-4">
-      <h1>Form Handling...</h1>
-      <form
-        // onSubmit={(e) => e.preventDefault()}
-        className=" bg-black flex flex-col gap-2 p-10 w-100 rounded-3xl "
-        action=""
-      >
-        <input
-          name="name"
-          onChange={handlChange}
-          className="p-2 rounded-2xl border-2"
-          type="text"
-          placeholder="Enter your name"
-        />
-        <input
-          onChange={handlChange}
-          name="email"
-          className="bg-gray-700 p-2 rounded-md"
-          type="email"
-          placeholder="Enter your email"
-        />
-        <input
-          onChange={handlChange}
-          name="password"
-          className="bg-gray-700 p-2 rounded-md"
-          type="password"
-          placeholder="Enter your password"
-        />
-      </form>
-      <button className="p-3 rounded-2xl border-2">Submit</button>
+    <div className="h-[100%] w-screen bg-gray-800">
+    <div className="h-screen w-screen bg-gray-800 p-2 text-white text-2xl flex  flex-col gap-4">
+      <Navbar settoggle={settoggle} toggle={toggle} />
+
+      {toggle?(  <Form setUserData={setUserData}
+       settoggle = {settoggle}
+       isEditedUser={isEditedUser}
+       setisEditedUser = {setisEditedUser}
+
+       />):(
+    <div className="flex flex-wrap gap-4">
+      {userData.map((val)=>(
+      <UserCard userData={userData}
+      settoggle = {settoggle}
+      toggle = {toggle}
+      user = {val}
+      handleDelete = {handleDelete}
+      handleUpdate = {handleUpdate}
+      />
+
+      ))}
+</div>
+       )}
+     
+    </div>
     </div>
   );
 };
