@@ -27,8 +27,7 @@ const App = () => {
           {...register("name", {
             required: "name is required",
           })}
-          id="name"
-          name="name"
+        
           type="text"
           placeholder="Enter your name"
         />
@@ -39,8 +38,7 @@ const App = () => {
           {...register("email", {
             required: "email is required",
           })}
-          id="email"
-          name="email"
+             
           type="text"
           placeholder="Enter your email"
         />
@@ -55,8 +53,7 @@ const App = () => {
               message: "minimum 8 digit is required",
             },
           })}
-          id="password"
-          name="password"
+         
           type="password"
           placeholder="Enter your password"
         />
