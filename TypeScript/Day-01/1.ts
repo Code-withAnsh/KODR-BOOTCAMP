@@ -1,1 +1,2 @@
-console.log("hello");
+let a : String = "Hello"
+console.log(a);
