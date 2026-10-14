@@ -1,9 +1,12 @@
-name: Deploy Day 07
+name: Deploy Day 14 Mini E-commerce
 
 on:
   push:
     branches:
       - main
+    paths:
+      - "Day 14 mini e-commerce/**"
+      - ".github/workflows/deploy.yml"
 
 permissions:
   contents: read
@@ -22,13 +25,28 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: "Day 14 mini e-commerce/package-lock.json"
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload Day 07
+      - name: Install dependencies
+        working-directory: "Day 14 mini e-commerce"
+        run: npm ci
+
+      - name: Build application
+        working-directory: "Day 14 mini e-commerce"
+        run: npm run build
+
+      - name: Upload Day 14 application
         uses: actions/upload-pages-artifact@v4
         with:
-          path: './Day-07 DOM-03'
+          path: "./Day 14 mini e-commerce/dist"
 
       - name: Deploy to GitHub Pages
         id: deployment
