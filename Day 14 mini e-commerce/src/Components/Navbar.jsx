@@ -1,10 +1,9 @@
-import React, { useContext } from "react";
+import  { useContext } from "react";
 import { myData } from "../Context/MyContext";
 
 
 const Navbar = () => {
   const {toggle,setToggle,productData} = useContext(myData)
-
 
   return (
     <nav className="sticky top-0 z-50 border-b border-slate-200 bg-white">

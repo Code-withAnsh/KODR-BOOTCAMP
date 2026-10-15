@@ -9,3 +9,10 @@ now here ts comes in the game it do that compile time if it did not find any err
 but how he do??
 source code  ==> goes into lexar ==> then into parser => then in binder ==> then in checker ==> transformer ==> js executes
 checker ke pass hi typescript chlta hai
+lexer ka kaam hota hai tokenise karna
+parser syntax tree me convert karta hai AST(abstract syntax tree) ye jata hai Binder ke andar
+binder mainly symbol tree banata hai jaise humare ts me :String ye sab pass krte hai ya cheker lagate hai
+ki ye string hai toh execute karo ye sab karta hai Binder
+then ab gya code checker me ye 2 baar code execute karta hai ye kya karta hau hum koi data type kisi bhi ki ==o declare kar dete hai
+toh ye whi check karta hai kahi aage code me koi aur data type toh nhi allot kar diye9
+

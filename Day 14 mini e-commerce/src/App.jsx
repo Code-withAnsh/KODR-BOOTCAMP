@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import  { useContext, useEffect, useState } from 'react'
 import Navbar from './Components/Navbar'
 import ProductCard from './Components/ProductCard'
 import axios from 'axios'
@@ -8,14 +8,14 @@ import CartScreen from './Components/CartScreen'
 const App = () => {
 
   const [userData, setuserData] = useState([])
-  const {toggle,settoggle} = useContext(myData)
+  const {toggle} = useContext(myData)
   let getproducts = async () => {
     let res = await axios.get("https://fakestoreapi.com/products");
 setuserData(res.data)
   }
 
 useEffect(()=>{
-getproducts()
+getproducts ()
 },[])
 
   return (
