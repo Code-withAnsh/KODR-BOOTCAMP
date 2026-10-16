@@ -1,7 +1,8 @@
 
+
 import { myData } from "../Context/MyContext";
 import  { useContext, useEffect } from "react";
-const ProductCard = ({ product }) => {
+const Home = ({ product }) => {
 
   const {productData,setProductData} = useContext(myData)
 
@@ -109,4 +110,4 @@ console.log(CartItem);
   );
 };
 
-export default ProductCard;
+export default Home;

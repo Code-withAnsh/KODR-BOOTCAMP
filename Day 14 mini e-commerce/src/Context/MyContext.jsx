@@ -1,27 +1,36 @@
 import { createContext, useEffect, useState } from 'react'
 
+// The context is intentionally kept in this module for backwards compatibility.
+// eslint-disable-next-line react-refresh/only-export-components
 export const myData = createContext();
 
 export const ContextProvider = ({ children }) => {
 let storedCart = localStorage.getItem('cart')
 let savedCart = JSON.parse(storedCart);
-let storedToggle = localStorage.getItem('cartOpen');
-let savedToggle = JSON.parse(storedToggle);
-const [toggle, setToggle] = useState(savedToggle || false);
 const [productData, setProductData] = useState(savedCart || []);
-
+const [registeredUser, setregisteredUser] = useState(
+    JSON.parse(localStorage.getItem('registeredUser')),
+    []);
+    const [loggedInUser, setloggedInUser] = useState([
+      JSON.parse(localStorage.getItem("loggedinUser")),
+    ]);
 useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(productData));
 }, [productData]);
 
-useEffect(() => {
-    localStorage.setItem("cartOpen", JSON.stringify(toggle));
-}, [toggle]);
-
 return (
-    <myData.Provider value={{ productData, setProductData, toggle, setToggle }}>
-        {children}
-    </myData.Provider>
+  <myData.Provider
+    value={{
+      productData,
+      setProductData,
+      registeredUser,
+      setregisteredUser,
+      loggedInUser,
+      setloggedInUser,
+    }}
+  >
+    {children}
+  </myData.Provider>
 );
 
 };

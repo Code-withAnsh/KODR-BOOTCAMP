@@ -10,7 +10,7 @@ const productItem = () =>{
     for(let i=0;i<productData.length;i++){
    let r1 = productData[i]
    let actualQuantity = r1.quantity
-   quantitySum = actualQuantity
+   quantitySum += actualQuantity
     }
     return quantitySum
 }
