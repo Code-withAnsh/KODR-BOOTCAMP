@@ -1,0 +1,4 @@
+kya banta hai? Store ke baad reducer bante hain. Reducer ke andar action bante hain, kyunki humne restaurant mein padha hai ki restaurant ke andar chef ka hota hai, kitchen ke andar. Kitchen ke andar chef ka rehta hai: chef cook, chef three. Waise hi kitchen ke andar reducer aur chef ka honge iske andar. Done?
+
+Ab customer sa aayenge. Kaun aayenge? Customer kaun hai? UI. UI ko agar koi bhi order chahiye, to kaun aayega UI ke paas? Dispatcher. Theek hai, to humein bas ye teen cheezein banani hain, zaroori hain: store, reducer aur uske andar ke action. Phir jab ye teeno cheezein ban jaati hain, to humein customer chahiye, aur customer aate hain 
+hum log do cheezon ka use karte hain: Redux Toolkit aur React Redux. theek hai, Redux Toolkit aur React Redux sahi hai. 
