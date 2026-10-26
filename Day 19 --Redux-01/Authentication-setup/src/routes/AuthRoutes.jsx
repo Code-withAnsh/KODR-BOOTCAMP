@@ -4,8 +4,30 @@ import Login from '../pages/Login'
 import Register from '../pages/Register'
 import MainLayout from '../Layout/MainLayout'
 import HomePage from '../pages/HomePage'
+import { useDispatch } from 'react-redux'
+import { toast } from 'react-toastify'
+import { addUser } from '../features/AuthSlice'
+import { useEffect } from 'react'
 
 const AuthRoutes = () => {
+
+
+    let dispatch  = useDispatch()
+
+    const hydrateuser = () =>{
+        let loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+        if(!loggedInUser){
+            toast.error('user not logged in')
+            return
+        }
+        dispatch(addUser(loggedInUser));
+    }
+    useEffect(() => {
+        hydrateuser()
+    
+     
+    }, [])
+    
 
     let route = createBrowserRouter([
 {

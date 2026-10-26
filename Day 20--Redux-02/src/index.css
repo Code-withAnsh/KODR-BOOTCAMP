@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Figtree:wght@400;500;600;700;800&display=swap");
+@import 'tailwindcss';
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(1deg); }
+}
+
+@keyframes drift {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(35px, -25px, 0) scale(1.08); }
+}
+
+.animate-rise { animation: rise .8s ease-out both; }
+.animate-float { animation: float 7s ease-in-out infinite; }
+.hero-orb {
+  position: absolute;
+  z-index: -5;
+  width: 22rem;
+  height: 22rem;
+  border-radius: 9999px;
+  filter: blur(70px);
+  opacity: .28;
+  animation: drift 12s ease-in-out infinite;
+}
+.hero-orb-one { top: 12%; right: 8%; background: #d946ef; }
+.hero-orb-two { bottom: 3%; left: 8%; background: #06b6d4; animation-delay: -5s; }
+.album-card { transition: transform .5s ease, filter .5s ease; }
+.album-card:hover { filter: brightness(1.15); transform: translate(-50%, -50%) rotate(0deg) scale(1.04); z-index: 30; }
+
+@keyframes gradshift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@theme {
+  --font-sans: "Figtree", system-ui, sans-serif;
+  --font-display: "Archivo", system-ui, sans-serif;
+}
+
+@keyframes word-in {
+  from { opacity: 0; transform: translateY(40%) skewY(4deg); }
+  to { opacity: 1; transform: translateY(0) skewY(0); }
+}
+
+@keyframes morph {
+  0%, 100% { border-radius: 60% 40% 55% 45% / 55% 45% 60% 40%; }
+  33% { border-radius: 40% 60% 45% 55% / 60% 40% 55% 45%; }
+  66% { border-radius: 55% 45% 60% 40% / 45% 55% 40% 60%; }
+}
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+@keyframes eq {
+  0%, 100% { transform: scaleY(.3); }
+  50% { transform: scaleY(1); }
+}
+
+@keyframes ping-soft {
+  0% { box-shadow: 0 0 0 0 rgba(95, 216, 106, .6); }
+  100% { box-shadow: 0 0 0 14px rgba(95, 216, 106, 0); }
+}
+
+.hero-mask {
+  -webkit-mask-image: url(/logo-mask.svg);
+  mask-image: url(/logo-mask.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
