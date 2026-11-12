@@ -28,9 +28,20 @@ const [registeredUsers, setRegisteredUsers] = useState(() => {
 
 let registerHandler = (data) =>{
 
+
+
+    let alreadyRegistered = registeredUsers.find((val)=>(val.email===data.email))
+    if (alreadyRegistered) {
+      toast.error("user already regsitered");
+      return;
+    }
+   
+
     let arr = [...registeredUsers,data]
     setRegisteredUsers(arr);
     localStorage.setItem("registeredUsers",JSON.stringify(arr))
+    toast.success("register successfully")
+    navigate("/")
     console.log(data);
 
 }
@@ -44,8 +55,9 @@ if(!user){
     return
 }
 dispatch(addUser(user))
-localStorage.setItem("loggedInUsers",JSON.stringify(user))
+localStorage.setItem("loggedInUser",JSON.stringify(user))
 toast.success("logged in successfully")
+navigate("/main")
 console.log('logged in users ==>',user);
 
 reset()
@@ -63,6 +75,7 @@ reset()
     loginHandler,
     showPassword,
     setShowPassword,
+
   };
 };
 

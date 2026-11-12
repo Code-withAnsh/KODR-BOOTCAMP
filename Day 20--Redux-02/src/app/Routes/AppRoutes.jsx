@@ -7,10 +7,14 @@ import { toast } from "react-toastify";
 import { addUser } from "../../features/auth/state/authSlice";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import Homepage from "../../features/Home/pages/Homepage";
+
 import MainLayout from "../layout/MainLayout";
-import SongList from "../../features/Home/pages/SongList";
-import SongPage from "../../features/Home/pages/SongPage";
+import SongList from "../../features/components/SongListCard";
+import Homepage from "../../features/Shared/UI/Pages/HomePage";
+import AlbumSongPage from "../../features/Shared/UI/Pages/SongPage";
+
+
+
 
 const Approutes = () =>{
 
@@ -43,7 +47,7 @@ const Approutes = () =>{
           },
           {
             path: "home",
-            element: <Homepage />,
+            element: <Homepage/>,
           },
         ],
       },
@@ -61,7 +65,7 @@ const Approutes = () =>{
           },
           {
             path: "songpage",
-            element: <SongPage />,
+            element: < AlbumSongPage/>,
           },
         ],
       },

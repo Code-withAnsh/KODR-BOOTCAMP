@@ -12,7 +12,7 @@ const authSlice = createSlice({
             state.user = action.payload,
             state.isAuthenticated = true;
         },
-        removeUser:(state,action)=>{
+        removeUser:(state)=>{
             state.user = null;
            state.isAuthenticated = false
         }
