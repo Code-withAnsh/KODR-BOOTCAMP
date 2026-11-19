@@ -1,0 +1,16 @@
+{
+  "name": "flash-sale-api-v2",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Last Server Standing - v2: in-memory serving, MongoDB batch commits (group commit) before every 201",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "mongodb": "^6.10.0"
+  }
+}

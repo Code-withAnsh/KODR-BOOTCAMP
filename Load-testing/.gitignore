@@ -1,0 +1,17 @@
+# ---- Project notes (never commit) ----
+project-notes/
+rule.md
+# ---- Secrets & credentials (never commit) ----
+.env
+.env.*
+keys/
+*.pem
+*.key
+
+# ---- Load test / runtime output ----
+results/
+*.log
+
+# ---- Common junk ----
+node_modules/
+.DS_Store

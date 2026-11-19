@@ -1,0 +1,8 @@
+/Users/shivmanisingh/KODER BOOTCAMP/Load-testing/rust-app/target/debug/build/derive-syn-parse/9f0e39fbc074e296/out/derive_syn_parse-9f0e39fbc074e296.d: /Users/shivmanisingh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/derive-syn-parse-0.2.0/src/lib.rs /Users/shivmanisingh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/derive-syn-parse-0.2.0/src/error_macros.rs /Users/shivmanisingh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/derive-syn-parse-0.2.0/src/fields.rs /Users/shivmanisingh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/derive-syn-parse-0.2.0/src/variants.rs
+
+/Users/shivmanisingh/KODER BOOTCAMP/Load-testing/rust-app/target/debug/build/derive-syn-parse/9f0e39fbc074e296/out/libderive_syn_parse-9f0e39fbc074e296.dylib: /Users/shivmanisingh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/derive-syn-parse-0.2.0/src/lib.rs /Users/shivmanisingh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/derive-syn-parse-0.2.0/src/error_macros.rs /Users/shivmanisingh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/derive-syn-parse-0.2.0/src/fields.rs /Users/shivmanisingh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/derive-syn-parse-0.2.0/src/variants.rs
+
+/Users/shivmanisingh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/derive-syn-parse-0.2.0/src/lib.rs:
+/Users/shivmanisingh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/derive-syn-parse-0.2.0/src/error_macros.rs:
+/Users/shivmanisingh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/derive-syn-parse-0.2.0/src/fields.rs:
+/Users/shivmanisingh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/derive-syn-parse-0.2.0/src/variants.rs:

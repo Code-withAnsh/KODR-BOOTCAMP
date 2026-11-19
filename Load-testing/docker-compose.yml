@@ -1,0 +1,31 @@
+# Flash-sale API (in-memory serving + MongoDB batch commits). Everything runs on this one box.
+services:
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    # --replSet enables transactions (needed for stock + order in one step)
+    command: ["mongod", "--replSet", "rs0", "--bind_ip_all", "--wiredTigerCacheSizeGB", "1"]
+    ports:
+      - "127.0.0.1:27017:27017"   # only reachable from this box
+    volumes:
+      - mongo-data:/data/db       # data on disk, survives restarts
+
+
+  app:
+    build: ./app
+    restart: unless-stopped
+    depends_on:
+      - mongo
+    env_file:
+      - .env                      # single source of truth for MONGO_URL, MONGO_RS_HOST
+    environment:
+      PORT: "8080"
+      MONGO_DB: "shopv2"
+      # Starting values for the target 2-vCPU box; tune without changing code.
+      MONGO_POOL_SIZE: "32"
+      ORDER_MAX_INFLIGHT: "8"
+    ports:
+      - "0.0.0.0:8080:8080"       # event requires 0.0.0.0:8080
+
+volumes:
+  mongo-data:

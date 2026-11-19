@@ -1,0 +1,8 @@
+/Users/shivmanisingh/KODER BOOTCAMP/Load-testing/rust-app/target/debug/build/icu_normalizer/038a786ec4c44966/out/icu_normalizer-038a786ec4c44966.d: /Users/shivmanisingh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/icu_normalizer-2.4.0/src/lib.rs /Users/shivmanisingh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/icu_normalizer-2.4.0/src/properties.rs /Users/shivmanisingh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/icu_normalizer-2.4.0/src/provider.rs /Users/shivmanisingh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/icu_normalizer-2.4.0/src/uts46.rs
+
+/Users/shivmanisingh/KODER BOOTCAMP/Load-testing/rust-app/target/debug/build/icu_normalizer/038a786ec4c44966/out/libicu_normalizer-038a786ec4c44966.rmeta: /Users/shivmanisingh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/icu_normalizer-2.4.0/src/lib.rs /Users/shivmanisingh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/icu_normalizer-2.4.0/src/properties.rs /Users/shivmanisingh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/icu_normalizer-2.4.0/src/provider.rs /Users/shivmanisingh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/icu_normalizer-2.4.0/src/uts46.rs
+
+/Users/shivmanisingh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/icu_normalizer-2.4.0/src/lib.rs:
+/Users/shivmanisingh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/icu_normalizer-2.4.0/src/properties.rs:
+/Users/shivmanisingh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/icu_normalizer-2.4.0/src/provider.rs:
+/Users/shivmanisingh/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/icu_normalizer-2.4.0/src/uts46.rs:
